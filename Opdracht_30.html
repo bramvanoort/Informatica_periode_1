@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <title>Restaurant Pisa</title>
+    <link rel="stylesheet" type="text/css"
+      href="Opdracht_30.css">
+    <script type="text/javascript">
+		function bestellen() {
+		mijnTekst = "U heeft besteld: ";
+		if (document.mijnForm.eten1.checked) {
+		          mijnTekst += "pizza";
+		} else if (document.mijnForm.eten2.checked) {
+		mijnTekst += "pasta"; } else {
+				  mijnTekst += "calzone";
+		}
+		mijnTekst += " met ";
+		if (document.mijnForm.vlees.checked) {
+				  mijnTekst += "vlees ";
+		}
+		if (document.mijnForm.vis.checked) {
+				  mijnTekst += "vis ";
+		}
+		if (document.mijnForm.kaas.checked) { mijnTekst += "kaas.";
+		}
+           alert(mijnTekst);
+        }     
+     </script>
+  </head>
+  <body>
+    <h2>Restaurant Pisa</h2>
+    <br>
+    <form name="mijnForm">
+      <input type="radio" id="eten1" name="eten"
+        value="Pizza" checked> Pizza
+      <br>
+      <input type="radio" id="eten2" name="eten"
+        value="Pasta"> Pasta
+      <br>
+      <input type="radio" id="eten3" name="eten"
+        value="Calzone"> Calzone
+      <br>
+      <br>
+      <input type="checkbox" id="vlees" name="vlees"
+        checked> Vlees
+      <br>
+      <input type="checkbox" id="vis" name="vis"> Vis
+      <br>
+      <input type="checkbox" id="kaas" name="kaas"> Kaas
+      <br>
+      <input type="button" name="knop" value="Bestellen"
+        onClick="bestellen()">
+    </form>
+  </body>
+</html>

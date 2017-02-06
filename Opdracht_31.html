@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+  <title>De klok</title>
+  <script type="text/javascript">
+/* Het script begint met het vastleggen van twee tekstvariabelen, tijdStr en datumStr*/
+var tijdStr, datumStr;
+/* Hieronder begint de functie klok*/
+function klok() {
+/* In de variabele nu wordt een datumobject geplaatst. Automatisch wordt die gevuld met de huidige datum*/
+nu = new Date();
+/* Eerst gaan we de tijd opbouwen.
+De uren worden uit de datum gehaald en in de variabele uren geplaatst.*/
+uren = nu.getHours();
+/* Ook de minuten en de seconden worden uit datum gehaald.*/
+minuten = nu.getMinutes();
+seconden = nu.getSeconds();
+/* Dan wordt nu tijdStr opgebouwd.
+Eerst worden de uren erin geplaatst*/
+tijdStr = "" + uren;
+/* en nu de minuten en de seconden.
+Dit deel wordt verderop nog uitgelegd.*/
+tijdStr += ((minuten < 10) ? ":0" : ":") + minuten; tijdStr += ((seconden < 10) ? ":0" : ":") + seconden; /* Nu wordt tijdStr in het tekstblok op het scherm geplaatst */
+document.klok.tijd.value = tijdStr;
+/* Iets soortgelijks als met de tijd wordt nu met de datum gedaan.*/
+dag = nu.getDate();
+maand = nu.getMonth()+1;
+jaar = nu.getFullYear();
+datumStr = ((dag < 10) ? "0" : "") + dag;
+datumStr += ((maand < 10) ? "-0" : "-") + maand; datumStr += "-" + jaar;
+/* en nu wordt datumStr in het tekstblok op het scherm geplaatst.*/
+document.klok.datum.value = datumStr;
+/* Een timer roept elke 1000 milliseconden de functie klok aan. Daardoor ververst de klok zich elke seconde.*/ Timer = setTimeout("klok()",1000);
+}
+  </script>
+</head>
+<!-- Als de body gestart wordt, wordt meteen ook de
+functie klok() gestart-->
+<body onLoad="klok()">
+  <form name="klok">
+    Tijd:
+    <input type="text" name="tijd" size="10" /><br />
+    Datum:
+    <input type="text" name="datum" size="10" /><br />
+  </form>
+</body>
+</html>

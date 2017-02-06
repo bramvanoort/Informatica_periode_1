@@ -1,0 +1,7 @@
+body {
+  background-image:
+    url("http://www.moorsmagazine.com/images/leaning-tower-pisa.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 200px 20px;
+}

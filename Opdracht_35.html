@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="Opdracht_35.css">
+        <title>De groenteman</title>
+        <script type="text/javascript">
+            function laatZien(divID) {
+                var item = document.getElementById(divID);
+                if (item) {
+                    if (item.className == "zichtbaar") {
+                        item.className = "verstopt";
+                    } else {
+                        item.className = "zichtbaar";
+                    }
+                }
+            }
+
+            function verberg(divID) {
+                var item = document.getElementById(divID);
+                if (item) {
+                    item.className = "verstopt";
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <header id="bovenste">
+             <h1>Dit is het bovenste deel van de webpagina</h1>
+        </header>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="javascript:laatZien('Appels');verberg('Peren');javascript:verberg('Bananen'); ">Appels</a>
+                </li>
+                <li><a href="javascript:laatZien('Peren');verberg('Appels');javascript:verberg('Bananen'); ">Peren</a>
+                </li>
+                <li><a href="javascript:laatZien('Bananen');verberg('Peren');javascript:verberg('Appels'); ">Bananen</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section id="inhoud">
+            <p>Hier komt de inhoud van de webpagina</p>
+            <div id="Appels" class="verstopt">
+                <img src="appels.jpg" />
+            </div>
+            <div id="Peren" class="verstopt">
+                <img src="peren.jpg" />
+            </div>
+            <div id="Bananen" class="verstopt">
+                <img src="bananen.jpg" />
+            </div>
+        </section>
+    </body>
+
+</html>

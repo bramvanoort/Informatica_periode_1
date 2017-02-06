@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header, nav, section {
+    display: block;
+}
+/*
+display: block betekent dat een element afgebeeld wordt als een blok. Daarmee zorg je er voor dat deze elementen witruimte boven en onder zich hebben. Verder zal een blok geen ander HTML ele- ment naast zich willen hebben tenzij dat andere element met een zogenaamde float opdracht juist de opdracht krijgt zich er wel naast te nestelen. In deze CSS opdracht leg je dus vast dat hea- der, nav en section de eigenschappen van een blok meekrijgen.
+*/
+ body {
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    width: 940px;
+    font-size: 13px;
+    line-height: 22px;
+    font-family: Helvetica, Arial, sans-serif;
+    background: #f0f0f0;
+}
+/*
+Je ziet hier dat de body een blok-element is waarvan je de mar- gin in kunt stellen. Bij een margin waar auto achterstaat wordt dit aan de browser overgelaten en dat betekent dat de body, hier 940 pixels breed (width), gecentreerd wordt als het browser- scherm groter is dan die 940 pixels.
+*/
+ h1 {
+    font-size: 28px;
+    line-height: 44px;
+    padding-top: 22px;
+    padding-right: 0px;
+    padding-bottom: 22px;
+    padding-left: 0px;
+}
+p {
+    padding-bottom: 22px;
+}
+/*
+h1 en p zijn beide blok-elementen en dus kun je o.a. de padding- waarde van het blok instellen.
+*/
+ nav {
+    position: absolute;
+    /*zet de positie van het nav-blok op een vaste plek*/
+    left: 0;
+    /*het blok begint links aan de linkerkant van de body*/
+    width: 100%;
+    /*het navigatieblok neemt de gehele breedte in van de
+  browser*/
+    background: #808080;
+}
+nav ul {
+    /*hiermee geeft je aan dat het om de unordered list van het
+  nav blok gaat*/
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    width: 940px;
+    /*de eigenschappen van de ul-blok*/
+    list-style: none;
+    /*hiermee verdwijnen bij de unordered list de bolletjes*/
+}
+nav ul li {
+    /*hiermee geeft je aan dat het om de list elementen van de
+  unordered list van het nav blok gaat*/
+    float: left;
+    /*de lijst gaat hierdoor van links naar rechts i.p.v. van
+  boven naar beneden*/
+}
+nav ul li a {
+    /*hiermee geeft je aan dat het om de a-elementen van de
+  list-elementen van de unordered list van het nav-blok gaat*/
+    display: block;
+    /*de a-elementen worden hier gedefinieerd als een blok en dus
+  kunnen we er blokeigenschappen aan toekennen*/
+    margin-right: 20px;
+    width: 140px;
+    font-size: 14px;
+    line-height: 44px;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+}
+nav ul li a:hover {
+    /*:hover is een zogenaamde pseudo-klasse (pseudo-class).
+  pseudo-klassen worden gebruikt om speciale effecten
+  aan een selector toe te voegen. De :hover pseudo-klasse
+  reageert als je met de muis over dat element gaat*/
+    color: #ffffff;
+}
+nav ul li.selected a {
+    /*hier gaat het om de geselecteerde link*/
+    color: #ffffff;
+}
+#inhoud {
+    position: relative;
+    margin-top: 66px;
+    padding: 44px;
+}
+#inhoud img {
+    width: 300px;
+    float: left;
+}
+#Appels.verstopt, #Peren.verstopt, #Bananen.verstopt {
+    display: none;
+}
+#Appels.zichtbaar, #Peren.zichtbaar, #Bananen.zichtbaar {
+    display: block;
+}

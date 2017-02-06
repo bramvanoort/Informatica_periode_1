@@ -1,0 +1,18 @@
+body {
+  font-family: Arial, Verdana, sans-serif;;
+  background-color: black
+}
+
+h2 {
+  color: yellow;
+}
+
+p{
+  color: white;
+  font-variant: small-caps
+}
+
+a:link { color: #F8E0E6 }
+a:visited { color: #2EFEF7 }
+a:hover { color: #F2F5A9 }
+a:active { color: #FFFFFF }

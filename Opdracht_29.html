@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <title>Een functie in JavaScript</title>
+    <script type="text/javascript"> function voegSamen() {
+       var resultaat= document.mijnForm.voornaam.value + " " + document.mijnForm.tussenvoegsel.value + " " + document.mijnForm.achternaam.value;
+       alert(resultaat);
+     }
+    </script>
+  </head>
+  <body>
+  <form name="mijnForm">
+    <input type="tekst" name="voornaam" value="">
+    <br>
+    <input type="tekst" name="tussenvoegsel" value="">
+    <br>
+    <input type="tekst" name="achternaam" value="">
+    <br>
+    <br>
+    <input type="button" value="Voeg samen" onClick="voegSamen()">
+  </form>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Een functie in JavaScript</title>
+        <script type="text/javascript">
+            function berekening() {
+
+                var amount = parseFloat(document.mijnForm.bedrag.value);
+                var intr = parseFloat(document.mijnForm.rente.value);
+                var years = parseFloat(document.mijnForm.jaren.value);
+
+                intr = 1 + (intr / 100);
+
+                for (i = 0; i < years; i++) {
+                    amount *= intr;
+                }
+                var result = Math.floor(amount);
+                alert(result);
+            }
+        </script>
+    </head>
+
+    <body>
+        <form name="mijnForm">bedrag
+            <input type="tekst" name="bedrag" value="1000">
+            <br>rente
+            <input type="tekst" name="rente" value="7">
+            <br>jaren
+            <input type="tekst" name="jaren" value="5">
+            <br>
+            <br>
+            <input type="button" value="Bereken" onClick="berekening()">
+        </form>
+    </body>
+
+</html>
